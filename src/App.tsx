@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { ApiDishes, CartDish, Dish } from './types';
+import { ApiDishes, Dish } from './types';
 import Home from './containers/Home/Home';
 import NewDish from './containers/NewDish/NewDish';
 import { Route, Routes, useLocation } from 'react-router-dom';

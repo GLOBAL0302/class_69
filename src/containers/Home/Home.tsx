@@ -1,6 +1,6 @@
 import Dishes from '../../components/Dishes/Dishes';
 import Cart from '../../components/Cart/Cart';
-import { CartDish, Dish } from '../../types';
+import {Dish } from '../../types';
 import Spinner from '../../components/Spinner/Spinner';
 import React from "react";
 

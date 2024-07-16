@@ -1,5 +1,4 @@
 import CartDishes from '../../components/Cart/CartDishes';
-import { CartDish } from '../../types';
 import { Link, Navigate, Outlet } from 'react-router-dom';
 import React from "react";
 import {useAppSelector} from "../../reduxFiles/hooks.ts";

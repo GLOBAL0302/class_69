@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
-import { CartDish, Customer, ApiOrder } from '../../types';
+import {Customer, ApiOrder } from '../../types';
 import axiosApi from '../../axiosApi';
 import { useNavigate } from 'react-router-dom';
 import Spinner from '../../components/Spinner/Spinner';
 import {useAppDispatch, useAppSelector} from "../../reduxFiles/hooks.ts";
 import {clearCart, selectCartDishes} from "../../reduxFiles/reduxSlices/cartSlice.ts";
-import {useDispatch} from "react-redux";
 
 const Order: React.FC = () => {
   const cartDishes = useAppSelector(selectCartDishes)

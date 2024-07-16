@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import Modal from '../Modal/Modal';
 import { useNavigate } from 'react-router-dom';
 import CartDishes from './CartDishes';
-import {useSelector} from "react-redux";
 import {useAppSelector} from "../../reduxFiles/hooks.ts";
 import {selectCartDishes} from "../../reduxFiles/reduxSlices/cartSlice.ts";
 
