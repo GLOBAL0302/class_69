@@ -3,13 +3,15 @@ import { CartDish, Customer, ApiOrder } from '../../types';
 import axiosApi from '../../axiosApi';
 import { useNavigate } from 'react-router-dom';
 import Spinner from '../../components/Spinner/Spinner';
+import {useAppDispatch, useAppSelector} from "../../reduxFiles/hooks.ts";
+import {clearCart, selectCartDishes} from "../../reduxFiles/reduxSlices/cartSlice.ts";
+import {useDispatch} from "react-redux";
 
-interface Props {
-  cartDishes: CartDish[];
-  clearCart: VoidFunction;
-}
+const Order: React.FC = () => {
+  const cartDishes = useAppSelector(selectCartDishes)
+  const dispatch = useAppDispatch()
 
-const Order: React.FC<Props> = ({ cartDishes, clearCart }) => {
+
   const [customer, setCustomer] = useState<Customer>({
     name: '',
     address: '',
@@ -40,7 +42,7 @@ const Order: React.FC<Props> = ({ cartDishes, clearCart }) => {
       await axiosApi.post('/orders.json', order);
     } finally {
       setIsLoading(false);
-      clearCart();
+      dispatch(clearCart())
       navigate('/');
     }
   };

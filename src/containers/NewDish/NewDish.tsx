@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import DishForm from '../../components/DishForm/DishForm';
 import { ApiDish } from '../../types';
 import axiosApi from '../../axiosApi';

@@ -1,6 +1,6 @@
-import React from 'react';
 import { Dish } from '../../types';
 import { Link } from 'react-router-dom';
+import React from "react";
 
 interface Props {
   dish: Dish;

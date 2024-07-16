@@ -1,5 +1,6 @@
-import React from 'react';
+
 import { CartDish } from '../../types';
+import React from "react";
 
 interface Props {
   cartDish: CartDish;

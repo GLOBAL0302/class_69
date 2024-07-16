@@ -4,12 +4,16 @@ import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.min.css';
+import {Provider} from "react-redux";
+import {store} from "./reduxFiles/store.ts";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   // <React.StrictMode>
+    <Provider store={store}>
   <BrowserRouter>
     <ToastContainer position="bottom-right" />
     <App />
   </BrowserRouter>,
+    </Provider>
   // </React.StrictMode>,
 );
